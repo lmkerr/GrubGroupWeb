@@ -1,0 +1,20 @@
+<div class="row">
+	<div class="header-row">
+		<h2>{{vm.title}} <small>Retrieved {{vm.pics.length}} pictures</small></h2>
+
+		<div class="search-form">
+			<form class="search" role="form" ng-submit="vm.loadimages()">
+				<span class="fa fa-search"></span>
+				<input placeholder="Search Flickr" ng-model="vm.searchval">
+			</form>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-6 col-md-3" ng-repeat="image in vm.pics">
+			<a class="thumbnail">
+				<img style="width:260px; height:180px;" src="{{image.media.m}}" />
+			</a>
+		</div>
+	</div>
+
+</div>
